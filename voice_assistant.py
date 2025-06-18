@@ -56,6 +56,10 @@ def run_assistant():
             topic = command.replace('search', '')
             speak(f"Searching for {topic}")
             pywhatkit.search(topic)
+        elif 'play' in command:
+            song = command.replace('play', '')
+            speak(f"Playing {song}")
+            pywhatkit.playonyt(song)
         elif 'stop' in command or 'bye' in command:
             speak("Goodbye! Have a great day.")
             break
